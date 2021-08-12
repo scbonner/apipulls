@@ -1,9 +1,9 @@
 import React from 'react';
-import FetchClass from './FetchClass';
-import FetchHooks from './FetchHooks';
-import FetchHooks2 from './FetchHooks2';
-import AxiosHooks from './AxiosHooks';
-import ReactTask from './ReactTask'
+// import FetchClass from './FetchClass';
+// import FetchHooks from './FetchHooks';
+// import FetchHooks2 from './FetchHooks2';
+// import AxiosHooks from './AxiosHooks';
+// import ReactTask from './ReactTask'
 import Header from './components/Header'
 
 
@@ -13,7 +13,7 @@ class App extends React.Component {
 
 	  return (
 	    <div className="App">
-	      <ul>
+	      {/* <ul>
             <li>Hello</li>
             <li>Goodbye</li>
             <br />
@@ -23,9 +23,9 @@ class App extends React.Component {
           <FetchHooks />
           <FetchHooks2 />
           <AxiosHooks />
-          <ReactTask />
-          <Header title='Getting Close' greeting='You Go Girl!' />
-        </ul>  
+          <ReactTask /> */}
+          <Header title='Task Tracker' />
+        {/* </ul>   */}
         </div>
         
       

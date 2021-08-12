@@ -1,27 +1,25 @@
-//Header component
-
-
-
+import Button from './Button'
 //property types 
 import PropTypes from 'prop-types'
 
 
 
-
-const Header = ({ title, greeting }) => {
+//removed props, greeting, after title
+const Header = ({ title }) => {
     return (
-        <header>
-            <h1 style={headingStyle}>{title}</h1>
-            <br />
-            <h2 style={headingStyle1}>{greeting}</h2>
-            <br />
+        <div className='container'>
+        <header className='header'>
+            <h1>{title}</h1>
+            <Button color='green' text='ADD' />
+            {/* <h2 style={headingStyle1}>{greeting}</h2> */}
         </header>
-    )
+        </div>
+    )   
 }
 
 
 Header.defaultProps = {
-    title: 'Updated Task Tracker',
+    title: 'Task Tracker',
 }
 
 Header.propTypes = {
@@ -33,17 +31,19 @@ Header.propTypes = {
 
 // CSS in JS
 const headingStyle = {
-    color: 'white',
+    color: 'black',
     padding: 15,
-    backgroundColor: 'blue'
+    backgroundColor: 'orange',
+    marginBottom: 20,
 }
 
-// CSS in JS
-const headingStyle1 = {
-    color: 'white',
-    backgroundColor: 'black',
-    padding: 15,
-}
+// // CSS in JS
+// const headingStyle1 = {
+//     color: 'white',
+//     backgroundColor: 'blue',
+//     padding: 15,
+//     marginBottom: 35,
+// }
 
 
 
