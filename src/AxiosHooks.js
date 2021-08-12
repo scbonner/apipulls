@@ -57,3 +57,23 @@ function AxiosHooks() {
 }
 
 export default AxiosHooks;
+
+
+// fuction happyBirthday(myNaubme) {
+//   for(let i = 0; i<myNumber.length; i+)
+
+// }
+
+
+//   }
+// }
+
+// let totalSum = [];
+// function sum(myArr) {
+//   for(let i = 0; i < myArr.length; i++)
+//   firstNumber += listOfNumers[i]
+// }
+// return totalSum
+// }
+// const listOfNubers = [10, 1000, 25, 30, 1]
+// console.log(myArr);
