@@ -1,20 +1,16 @@
-import PropTypes from 'prop-types'
+ import PropTypes from 'prop-types'
 
 
-// Button has two props
-const Button = ({ color, text }) => {
-    const onClick = () => {
-        console.log('click')
-    }
-    
+// Button has three props
+const Button = ({ color, text, onClick }) => {
     return (
-        <div>
-        {/* setting up and event on button */}
-             <button 
-            //  setting up function onClick... go to line under button component
-                onClick={onClick}   
-                style={{backgroundColor: color }}className='btn'>{text}</button>
-        </div>
+        <button 
+            onClick={onClick}
+            style={{ backgroundColor: color }} 
+            className='btn'>
+            {text}
+        </button>
+    
     )
 }
 
@@ -25,6 +21,7 @@ Button.defaultProps = {
 Button.propTypes = {
     text: PropTypes.string,
     color: PropTypes.string,
+    onClick: PropTypes.func,
 }
 
 

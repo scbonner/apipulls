@@ -1,19 +1,23 @@
 import Button from './Button'
-//property types 
 import PropTypes from 'prop-types'
+// import { useLocation } from 'react-router-dom'
 
 
 
 //removed props, greeting, after title
 const Header = ({ title }) => {
+    // const location = useLocation()
+    const onClick = () => {
+        console.log('click')
+    }
+
     return (
-        <div className='container'>
         <header className='header'>
             <h1>{title}</h1>
-            <Button color='green' text='ADD' />
+            <Button color='green' text='ADD' onClick={onClick} /> 
+            {/* embedded Button component above */}
             {/* <h2 style={headingStyle1}>{greeting}</h2> */}
         </header>
-        </div>
     )   
 }
 
@@ -24,18 +28,18 @@ Header.defaultProps = {
 
 Header.propTypes = {
     // want this to be a string, so type
-    title: PropTypes.string,
-    greeting: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    // greeting: PropTypes.string,
 }
 
 
 // CSS in JS
-const headingStyle = {
-    color: 'black',
-    padding: 15,
-    backgroundColor: 'orange',
-    marginBottom: 20,
-}
+// const headingStyle = {
+//     color: 'black',
+//     padding: 15,
+//     backgroundColor: 'orange',
+//     marginBottom: 20,
+// }
 
 // // CSS in JS
 // const headingStyle1 = {
