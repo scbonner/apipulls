@@ -6,6 +6,7 @@ import { useState } from 'react'
 // import ReactTask from './ReactTask'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
+import AddTask from './components/AddTask'
 
 
 const App = () => {
@@ -31,7 +32,31 @@ const App = () => {
 
 ])
 
-	  return (
+
+// Add Task
+
+const addTask = (task) => {
+  const id = Math.floor(Math.random() * 10000) + 1
+
+  console.log(id)
+}
+
+// Delete an individual task
+const deleteTask = (id) => {
+  setTasks(tasks.filter((task) => task.id !== id))
+
+}
+
+// Toggle Reminder
+const toggleReminder = (id) => {
+  setTasks(
+    tasks.map((task) => 
+      task.id === id ? { ...task, reminder:
+      !task.reminder } : task
+      )
+    )
+}
+  return(
 	    <div className="container">
 	      {/* <ul>
             <li>Hello</li>
@@ -44,11 +69,15 @@ const App = () => {
           <FetchHooks2 />
           <AxiosHooks />
           <ReactTask /> */}
-          <Header title='Task Tracker' />
-          <Tasks tasks={tasks} /> 
-        {/* </ul>   */}
+          <Header />
+          <AddTask onAdd={addTask} />
+          {tasks.length > 0 ? ( 
+          <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> 
+      ) : (
+        'No Tasks To Show'
+      )}
         </div>
-	  );
+  )
   }
 
 
