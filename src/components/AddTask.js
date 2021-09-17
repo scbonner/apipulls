@@ -19,7 +19,6 @@ const AddTask = ({ onAdd }) => {
 
             setText('')
             setDay('')
-// setReminder is a boolean and set to false
             setReminder(false)
         
 

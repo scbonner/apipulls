@@ -5,16 +5,11 @@ import PropTypes from 'prop-types'
 
 
 //removed props, greeting, after title
-const Header = ({ title }) => {
-    // const location = useLocation()
-    const onClick = () => {
-        console.log('click')
-    }
-
+const Header = ({ title, onAdd }) => {
     return (
         <header className='header'>
             <h1>{title}</h1>
-            <Button color='green' text='ADD' onClick={onClick} /> 
+            <Button color='green' text='ADD' onClick={onAdd} /> 
             {/* embedded Button component above */}
             {/* <h2 style={headingStyle1}>{greeting}</h2> */}
         </header>

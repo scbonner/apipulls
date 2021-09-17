@@ -1,11 +1,12 @@
 import React from 'react';
+import { useState, useCallback } from 'react';
 import axios from 'axios';
 import './AxiosHooks';
 
 function AxiosHooks() {
-  let [responseData, setResponseData] = React.useState('');
+  let [responseData, setResponseData] = useState('');
 
-  const fetchData = React.useCallback(() => {
+  const fetchData = useCallback(() => {
     axios({
       "method": "GET",
       "url":  ("https://reqres.in/api/users/"),
